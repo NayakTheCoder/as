@@ -10,14 +10,14 @@
             position: absolute;
             left: 43%;
             font-size:55px;
-            color:rgb(12, 102, 102)
+            color:rgb(12, 82, 53)
         }
         #intro{
             position: absolute;
             top: 18%;
             left: 6%;
             font-size: 35px;
-            color: darkblue;
+            color: rgb(54, 121, 93);
         }
         #box1{
             position: absolute;
@@ -31,14 +31,35 @@
             position: absolute;
             top: -18%;
             left: 8.5%;
-            font-size: 35px;
-            color: rgb(7, 105, 81);
+            font-size: 25px;
+            color: rgb(3, 87, 66);
         }
     #intro2{
             position: absolute;
             top: -18%;
             left: 7.5%;
-            font-size: 35px;
+            font-size: 25px;
+            color: rgb(3, 87, 66);
+        }
+        #intro3{
+            position: absolute;
+            top: -18%;
+            left: 7.5%;
+            font-size: 25px;
+            color: rgb(3, 87, 66);
+        }
+        #intro4{
+            position: absolute;
+            top: -18%;
+            left: 7.5%;
+            font-size: 25px;
+            color: rgb(3, 87, 66);
+        }
+        #intro5{
+            position: absolute;
+            top: -18%;
+            left: 7.5%;
+            font-size: 25px;
             color: rgb(3, 87, 66);
         }
         #lin{
@@ -50,7 +71,7 @@
         }
         button{
             position: absolute;
-            background-color: rgba(1, 160, 99, 0.377);
+            background-color: rgb(83, 4, 90);
             color: white;
             width: 10%;
             height: 7%;
@@ -61,25 +82,31 @@
             cursor: pointer;
         }
         button:hover{
-            box-shadow: 6px 6px 23px 23px rgb(126, 246, 210);
+            box-shadow: 2px 2px 13px 13px rgb(153, 150, 153);
         }
     </style>
 </head>
-<body style="background-color: rgb(151, 214, 214);">
+<body style="background-color: rgb(0, 0, 0);">
   <div id="text"><h1>My School</h1>
   <div id="box1"><p id="intro">Hey there !! I am from Ryan international school Sanpada and a proud ryanite and today I am going to tell a few things about my school.</p></div> 
  <p id="intro1" >1.My school focuses on all-round development rather than just plain studies</p>
  <p id="intro2" >2.The teachers of my school aim on making the students understand the concept rather than making them by-heart them </p>
  <a id="lin" href="https://www.ryaninternational.org/RX-IndiaSchools-20-21/">If you ever wish to check about my school pls refer to this link</a>
+ <p id="intro2" >3.The teachers understand our problems and help us to solve them </p>
+ <p id="intro3" >3.Our school provides us with all the necessary items required for our studies and other activities </p>
+ <p id="intro4" >4.Students are encouraged to pursue their hobbies and their talents are appreciated </p>
+ <p id="intro5" >5.Lastly , our school appreciates the amount of effort we put into our work and help us at every step of life </p>
 </div>
 <button id="button" type="button" onclick="myfunction()">VOICE?</button>
 </body>
 <script>
-    let body = document.querySelector("body");
     let text = document.getElementById("text")
     let x = document.getElementById("box1");
     let y = document.getElementById("intro1");
     let z = document.getElementById("intro2");
+    let v = document.getElementById("intro3");
+    let c = document.getElementById("intro4");
+    let s = document.getElementById("intro5");
     window.onload = setTimeout(function(){
         x.style.transition = "2s";
         x.style.opacity = 1;
@@ -93,19 +120,28 @@
     window.onload = setTimeout(function(){
         z.style.transition = "5s";
         z.style.opacity = 1;
-        z.style.top = "51%";
+        z.style.top = "44.5%";
     } , 14500);
-    window.onload = setInterval(function(){
-       let num = Math.floor(Math.random()*5);
-         if(num = 1){
-              body.style.background = "rgb(151, 214, 214);"
-          }
-    })
+    window.onload = setTimeout(function(){
+        v.style.transition = "6.5s";
+        v.style.opacity = 1;
+        v.style.top = "49.5%";
+    } , 18500);
+    window.onload = setTimeout(function(){
+        c.style.transition = "6.5s";
+        c.style.opacity = 1;
+        c.style.top = "54.5%";
+    } , 21500);
+    window.onload = setTimeout(function(){
+        s.style.transition = "6.5s";
+        s.style.opacity = 1;
+        s.style.top = "59.5%";
+    } , 26500);
     function myfunction(){
         let speech = new SpeechSynthesisUtterance();
     speech.pitch = 100;
     speech.volume = 2;
-    speech.text = "Hey there !! I am from Ryan international school Sanpada and a proud ryanite and today I am going to tell a few things about my school.                1.My school focuses on all-round development rather than just plain studies.                2.The teachers of my school aim on making the students understand the concept rather than making them by-heart them.";
+    speech.text = "Hey there !! I am from Ryan international school Sanpada and a proud ryanite and today I am going to tell a few things about my school.                1.My school focuses on all-round development rather than just plain studies.                2.The teachers of my school aim on making the students understand the concept rather than making them by-heart them.          3.Our school provides us with all the necessary items required for our studies and other activities.        4.Students are encouraged to pursue their hobbies and their talents are appreciated.            5.Lastly , our school appreciates the amount of effort we put into our work and help us at every step of life ";
     speechSynthesis.speak(speech)
     }
 </script>
